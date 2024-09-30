@@ -64,23 +64,35 @@ class MainActivity : ComponentActivity() {
                 getString(R.string.track_performer),
                 R.mipmap.play_icon
             ),
+            TrackDetails(
+                R.drawable.egor_creed_58_track_poster,
+                getString(R.string.track_title),
+                getString(R.string.track_performer),
+                R.mipmap.play_icon
+            ),
+            TrackDetails(
+                R.drawable.egor_creed_58_track_poster,
+                getString(R.string.track_title),
+                getString(R.string.track_performer),
+                R.mipmap.play_icon
+            ),
+            TrackDetails(
+                R.drawable.egor_creed_58_track_poster,
+                getString(R.string.track_title),
+                getString(R.string.track_performer),
+                R.mipmap.play_icon
+            ),
+            TrackDetails(
+                R.drawable.egor_creed_58_track_poster,
+                getString(R.string.track_title),
+                getString(R.string.track_performer),
+                R.mipmap.play_icon
+            ),
         )
     }
 
     private fun adListItems() : List<AdvertisementDetails> {
         return listOf(
-            AdvertisementDetails(
-                getString(R.string.ad_category),
-                getString(R.string.ad_title),
-                getString(R.string.ad_abstract),
-                R.drawable.morgenshtern_naked_ad
-            ),
-            AdvertisementDetails(
-                getString(R.string.ad_category),
-                getString(R.string.ad_title),
-                getString(R.string.ad_abstract),
-                R.drawable.morgenshtern_naked_ad
-            ),
             AdvertisementDetails(
                 getString(R.string.ad_category),
                 getString(R.string.ad_title),

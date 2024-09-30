@@ -34,26 +34,26 @@ class PlayerRecyclerAdapter(private val tracks: List<TrackDetails>, private val 
         val adImage = itemView.findViewById<ImageView>(R.id.ad_image)
     }
 
+    override fun getItemViewType(position: Int) : Int = (position + 1) % 3
+
+    override fun getItemCount(): Int = ads.size + tracks.size
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
          when(viewType) {
-             PlayerViewType.ADVERTISEMENT.ordinal -> {
-                val itemView: View  = LayoutInflater
-                    .from(parent.context)
-                    .inflate(R.layout.track_item, parent, false)
-                return TrackViewHolder(itemView)
-            }
-            else -> {
+            PlayerViewType.ADVERTISEMENT.ordinal -> {
                  val itemView: View = LayoutInflater
                      .from(parent.context)
                      .inflate(R.layout.advertisement_item, parent, false)
                  return AdvertisementViewHolder(itemView)
+            }
+            else -> {
+                 val itemView: View  = LayoutInflater
+                     .from(parent.context)
+                     .inflate(R.layout.track_item, parent, false)
+                 return TrackViewHolder(itemView)
              }
          }
     }
-
-    override fun getItemCount(): Int = ads.size + tracks.size
-
-    override fun getItemViewType(position: Int) : Int = position % 3
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         when(holder) {
@@ -66,15 +66,16 @@ class PlayerRecyclerAdapter(private val tracks: List<TrackDetails>, private val 
                     adImage.setImageResource(ads[realPosition].image)
                 }
             }
-            else -> {
+            is TrackViewHolder -> {
                 val realPosition = position % tracks.size
-                (holder as TrackViewHolder).apply {
+                holder.apply {
                     trackPoster.setImageResource(tracks[realPosition].poster)
                     trackTitle.text = tracks[realPosition].title
                     trackPerformer.text = tracks[realPosition].performer
                     trackPlayIcon.setImageResource(tracks[realPosition].playIcon)
                 }
             }
+            else -> throw IllegalStateException("Undefined view holder: $holder")
         }
     }
 }
