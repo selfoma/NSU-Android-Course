@@ -2,15 +2,15 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="328dp"
-    android:layout_height="72dp"
-    android:layout_marginStart="39dp"
-    android:layout_marginEnd="39dp"
-    android:layout_marginTop="16dp"
-    android:layout_marginBottom="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:cardCornerRadius="20dp">
+    app:cardCornerRadius="14dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="12dp"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -46,6 +46,8 @@
             android:layout_marginTop="14dp"
             android:layout_marginBottom="34dp"
             android:layout_marginEnd="68dp"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:text="@string/track_item_pattern_title"
             android:textColor="@color/player_item_main"
             android:textSize="16sp"
@@ -62,6 +64,7 @@
             android:layout_marginTop="38dp"
             android:layout_marginBottom="14dp"
             android:layout_marginEnd="68dp"
+            android:ellipsize="end"
             android:text="@string/track_item_pattern_performer"
             android:textColor="@color/player_item_sub"
             android:textSize="14sp"
@@ -73,16 +76,13 @@
             android:id="@+id/play_icon"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginStart="282dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginBottom="26dp"
-            android:layout_marginEnd="26dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
             android:src="@drawable/default_no_image"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.cardview.widget.CardView>
