@@ -27,6 +27,7 @@
 
         <activity
             android:name=".activities.ConverterActivity"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/Theme.Converter">
         </activity>
