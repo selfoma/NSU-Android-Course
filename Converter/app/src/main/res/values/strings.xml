@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Converter</string>
+    <string name="greetings">Курсы валют ЦБ РФ</string>
+    <string name="converter_button">Конвертировать</string>
+    <string name="boot_text">Fetching valutes…</string>
+    <string name="num_code">Цифр. код</string>
+    <string name="char_code">Букв. код</string>
+    <string name="nominal">Единиц</string>
+    <string name="prompt_input">Enter rubles to convert to…</string>
+    <string name="output">Result: </string>
+    <string name="valute">Валюта</string>
+    <string name="value">Курс</string>
+    <string name="input_failure">Empty input</string>
+    <string name="example_num_code">000</string>
+    <string name="example_char_code">AAA</string>
+    <string name="example_nominal">1</string>
+    <string name="example_valute">Магический дублон</string>
+    <string name="example_value">100000</string>
+    <string name="exampe_now_prev_diff">-0.1</string>
+</resources>

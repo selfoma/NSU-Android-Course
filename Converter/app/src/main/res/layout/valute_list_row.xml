@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/num_code"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:text="@string/example_num_code"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/char_code"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/example_char_code"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toEndOf="@id/num_code"/>
+
+        <TextView
+            android:id="@+id/nominal"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/example_nominal"
+            android:textAlignment="viewEnd"
+            app:layout_constraintStart_toEndOf="@id/char_code"/>
+
+        <TextView
+            android:id="@+id/valute"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/example_valute"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toEndOf="@id/nominal"/>
+
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/example_value"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toEndOf="@id/valute"/>
+
+        <TextView
+            android:id="@+id/now_prev_diff"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/exampe_now_prev_diff"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toEndOf="@id/value" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</TableRow>
