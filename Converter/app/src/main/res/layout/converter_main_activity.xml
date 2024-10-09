@@ -8,156 +8,167 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-   <TextView
-       android:id="@+id/greeting"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="@string/greetings"
-       android:textAlignment="center"
-       android:textSize="20sp"
-       android:textStyle="bold"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintEnd_toEndOf="parent" />
-
-   <HorizontalScrollView
-       android:id="@+id/table_header_hscroll_view"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:scrollbars="none"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/greeting">
-
-      <androidx.constraintlayout.widget.ConstraintLayout
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content">
-
-         <TextView
-             android:id="@+id/num_code_col"
-             android:layout_width="69dp"
-             android:layout_height="wrap_content"
-             android:text="@string/num_code"
-             android:textStyle="bold"
-             app:layout_constraintStart_toStartOf="parent" />
-
-         <TextView
-             android:id="@+id/char_code_col"
-             android:layout_width="66dp"
-             android:layout_height="wrap_content"
-             android:layout_marginStart="10dp"
-             android:text="@string/char_code"
-             android:textStyle="bold"
-             app:layout_constraintStart_toEndOf="@id/num_code_col" />
-
-
-         <TextView
-             android:id="@+id/nominal_col"
-             android:layout_width="50dp"
-             android:layout_height="wrap_content"
-             android:layout_marginStart="10dp"
-             android:text="@string/nominal"
-             android:textStyle="bold"
-             app:layout_constraintStart_toEndOf="@id/char_code_col" />
-
-         <TextView
-             android:id="@+id/valute_col"
-             android:layout_width="300dp"
-             android:layout_height="wrap_content"
-             android:layout_marginStart="10dp"
-             android:text="@string/valute"
-             android:textStyle="bold"
-             app:layout_constraintStart_toEndOf="@id/nominal_col" />
-
-         <TextView
-             android:id="@+id/value_col"
-             android:layout_width="70dp"
-             android:layout_height="wrap_content"
-             android:layout_marginStart="10dp"
-             android:text="@string/value"
-             android:textStyle="bold"
-             app:layout_constraintStart_toEndOf="@id/valute_col" />
-
-         <TextView
-             android:id="@+id/now_prev_diff_col"
-             android:layout_width="45dp"
-             android:layout_height="wrap_content"
-             android:layout_marginStart="5dp"
-             android:text=""
-             app:layout_constraintStart_toEndOf="@id/value_col" />
-
-      </androidx.constraintlayout.widget.ConstraintLayout>
-   </HorizontalScrollView>
-
    <ScrollView
-       android:id="@+id/valute_scroll_view"
        android:layout_width="wrap_content"
-       android:layout_height="550dp"
-       android:layout_marginTop="5dp"
-       android:scrollbars="vertical"
+       android:layout_height="wrap_content"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@id/table_header_hscroll_view">
-      
-      <HorizontalScrollView
-          android:id="@+id/table_data_hscroll_view"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content">
+       app:layout_constraintTop_toTopOf="parent">
 
-         <TableLayout
-             android:id="@+id/valute_table"
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+         <TextView
+             android:id="@+id/greeting"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:stretchColumns="*" />
-      </HorizontalScrollView>
+             android:text="@string/greetings"
+             android:textAlignment="center"
+             android:textSize="20sp"
+             android:textStyle="bold"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintEnd_toEndOf="parent" />
+
+         <HorizontalScrollView
+             android:id="@+id/table_header_hscroll_view"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:scrollbars="none"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/greeting">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/num_code_col"
+                   android:layout_width="69dp"
+                   android:layout_height="wrap_content"
+                   android:text="@string/num_code"
+                   android:textStyle="bold"
+                   app:layout_constraintStart_toStartOf="parent" />
+
+               <TextView
+                   android:id="@+id/char_code_col"
+                   android:layout_width="66dp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:text="@string/char_code"
+                   android:textStyle="bold"
+                   app:layout_constraintStart_toEndOf="@id/num_code_col" />
+
+
+               <TextView
+                   android:id="@+id/nominal_col"
+                   android:layout_width="50dp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:text="@string/nominal"
+                   android:textStyle="bold"
+                   app:layout_constraintStart_toEndOf="@id/char_code_col" />
+
+               <TextView
+                   android:id="@+id/valute_col"
+                   android:layout_width="300dp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:text="@string/valute"
+                   android:textStyle="bold"
+                   app:layout_constraintStart_toEndOf="@id/nominal_col" />
+
+               <TextView
+                   android:id="@+id/value_col"
+                   android:layout_width="70dp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:text="@string/value"
+                   android:textStyle="bold"
+                   app:layout_constraintStart_toEndOf="@id/valute_col" />
+
+               <TextView
+                   android:id="@+id/now_prev_diff_col"
+                   android:layout_width="45dp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="5dp"
+                   android:text=""
+                   app:layout_constraintStart_toEndOf="@id/value_col" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+         </HorizontalScrollView>
+
+         <ScrollView
+             android:id="@+id/valute_scroll_view"
+             android:layout_width="wrap_content"
+             android:layout_height="550dp"
+             android:layout_marginTop="5dp"
+             android:scrollbars="vertical"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/table_header_hscroll_view">
+
+            <HorizontalScrollView
+                android:id="@+id/table_data_hscroll_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+               <TableLayout
+                   android:id="@+id/valute_table"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:stretchColumns="*" />
+            </HorizontalScrollView>
+         </ScrollView>
+
+         <EditText
+             android:id="@+id/valute_input"
+             android:layout_width="300dp"
+             android:layout_height="wrap_content"
+             android:hint="@string/prompt_input"
+             android:textColor="@color/black"
+             android:inputType="numberDecimal"
+             app:layout_constraintStart_toStartOf="parent" />
+
+         <Spinner
+             android:id="@+id/valute_chooser"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:spinnerMode="dialog"
+             app:layout_constraintStart_toEndOf="@id/valute_input"
+             app:layout_constraintTop_toBottomOf="@+id/valute_scroll_view"/>
+
+          <Button
+              android:id="@+id/convert_button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:text="@string/converter_button"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/valute_input"
+              app:layout_constraintEnd_toEndOf="parent"/>
+
+         <TextView
+             android:id="@+id/title_output"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+             android:text="@string/output"
+             android:textSize="20sp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/convert_button"/>
+
+         <TextView
+             android:id="@+id/output"
+             android:layout_width="300dp"
+             android:layout_height="wrap_content"
+             android:textSize="20sp"
+             android:textColor="@color/warning"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/title_output"/>
+
+      </LinearLayout>
    </ScrollView>
-
-   <EditText
-       android:id="@+id/valute_input"
-       android:layout_width="300dp"
-       android:layout_height="wrap_content"
-       android:hint="@string/prompt_input"
-       android:textColor="@color/black"
-       android:inputType="numberDecimal"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/valute_scroll_view"/>
-
-   <Spinner
-       android:id="@+id/valute_chooser"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="10dp"
-       android:layout_marginStart="3dp"
-       android:paddingStart="5dp"
-       android:spinnerMode="dialog"
-       app:layout_constraintStart_toEndOf="@id/valute_input"
-       app:layout_constraintTop_toBottomOf="@+id/valute_scroll_view"/>
-
-    <Button
-        android:id="@+id/convert_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/converter_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/valute_input"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-   <TextView
-       android:id="@+id/title_output"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="@string/output"
-       android:textSize="20sp"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/convert_button"/>
-
-   <TextView
-       android:id="@+id/output"
-       android:layout_width="300dp"
-       android:layout_height="wrap_content"
-       android:layout_marginStart="10dp"
-       android:textSize="20sp"
-       android:textColor="@color/warning"
-       app:layout_constraintStart_toEndOf="@+id/title_output"
-       app:layout_constraintTop_toBottomOf="@id/convert_button"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
