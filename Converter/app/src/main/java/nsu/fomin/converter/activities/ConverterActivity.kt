@@ -18,7 +18,7 @@ import nsu.fomin.converter.valute.ValuteMap
 class ConverterActivity : ComponentActivity() {
 
     private val valuteMap: ValuteMap by lazy {
-        IntentCompat.getParcelableExtra(intent, "valuteMap", ValuteMap::class.java)
+        IntentCompat.getParcelableExtra(intent, getString(R.string.valute_map_extra), ValuteMap::class.java)
                                     as ValuteMap
     }
 

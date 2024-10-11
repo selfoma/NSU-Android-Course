@@ -17,4 +17,6 @@
     <string name="example_valute">Магический дублон</string>
     <string name="example_value">100000</string>
     <string name="exampe_now_prev_diff">-0.1</string>
+
+    <string name="valute_map_extra">valuteMap</string>
 </resources>

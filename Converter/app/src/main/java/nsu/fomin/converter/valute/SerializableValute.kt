@@ -25,7 +25,13 @@ data class Valute(
 ) : Parcelable
 
 @Serializable
-data class ValuteList(
+@Parcelize
+data class ValuteMap (
     @JsonNames("Valute")
-    val list: JsonObject? = null,
-)
+    val map: Map<String, Valute>? = null
+)  : Parcelable {
+
+    fun getValute(key: String) : Valute? {
+        return map?.get(key)
+    }
+}
