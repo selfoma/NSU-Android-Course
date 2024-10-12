@@ -2,14 +2,12 @@ package nsu.fomin.converter.valute
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.async
-import kotlinx.coroutines.delay
 import kotlinx.serialization.json.Json
 import java.net.ConnectException
 import java.net.URL
 
-class ValuteListProvider {
+class ValuteMapProvider {
 
     private val serializer: Json = Json { ignoreUnknownKeys = true }
 

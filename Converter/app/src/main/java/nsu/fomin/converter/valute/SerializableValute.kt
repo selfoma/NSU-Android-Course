@@ -1,11 +1,9 @@
 package nsu.fomin.converter.valute
 
-import android.os.Parcel
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonNames
-import kotlinx.serialization.json.JsonObject
 
 @Serializable
 @Parcelize
