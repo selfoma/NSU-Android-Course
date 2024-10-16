@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Layout</string>
+    <string name="track_title">58</string>
+    <string name="track_performer">Егор Крид</string>
+    <string name="ad_category">Music</string>
+    <string name="ad_title">Моргенштерн голый!</string>
+    <string name="ad_abstract">Известный рэпер снялся в порно</string>
+    <string name="track_item_pattern_title">TRACK_TITLE</string>
+    <string name="track_item_pattern_performer">TRACK_PERFORMER</string>
+    <string name="advertisement_item_pattern_category">AD_CATEGORY</string>
+    <string name="advertisement_item_pattern_title">AD_TITLE</string>
+    <string name="advertisement_item_pattern_abstract">AB_ABSTRACT</string>
+</resources>
