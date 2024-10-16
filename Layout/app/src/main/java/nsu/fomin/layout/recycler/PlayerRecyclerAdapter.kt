@@ -15,9 +15,9 @@ import java.security.InvalidParameterException
 class PlayerRecyclerAdapter(private val tracks: List<TrackDetails>, private val ads: List<AdvertisementDetails>)
     : RecyclerView.Adapter<ViewHolder>() {
 
-    private enum class PlayerViewType {
-        ADVERTISEMENT,
-        TRACK
+    private enum class PlayerViewType(var value: Int) {
+        ADVERTISEMENT(1),
+        TRACK(2)
     }
 
     class TrackViewHolder(itemView: View) : ViewHolder(itemView) {
@@ -40,18 +40,19 @@ class PlayerRecyclerAdapter(private val tracks: List<TrackDetails>, private val 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
          when(viewType) {
-            PlayerViewType.ADVERTISEMENT.ordinal -> {
+            PlayerViewType.ADVERTISEMENT.value -> {
                  val itemView: View = LayoutInflater
                      .from(parent.context)
                      .inflate(R.layout.advertisement_item, parent, false)
                  return AdvertisementViewHolder(itemView)
             }
-            else -> {
+             PlayerViewType.TRACK.value -> {
                  val itemView: View  = LayoutInflater
                      .from(parent.context)
                      .inflate(R.layout.track_item, parent, false)
                  return TrackViewHolder(itemView)
              }
+             else -> throw IllegalStateException("Undefined view type: $viewType")
          }
     }
 
